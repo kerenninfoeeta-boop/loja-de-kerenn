@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>🍔 Nossos produtos</h2>
+
+<table border="1">
+
+<tr>
+    <th>Produto</th>
+    <th>Preço</th>
+    <th>Status</th>
+</tr>
+
+{% for produto in produtos %}
+
+<tr>
+    <td>{{ produto.nome }}</td>
+
+    <td>R$ {{ "%.2f"|format(produto.preco) }}</td>
+
+    <td>
+
+        {% if produto.estoque == 0 %}
+            Esgotado ❌
+
+        {% elif produto.oferta %}
+            EM OFERTA 🔥
+
+        {% else %}
+            Disponível ✅
+
+        {% endif %}
+
+    </td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}
