@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff8f0;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background: #1f1f1f;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffb703;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffb703;
+}
+
+/* Página inicial */
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+    ),
+    url("https://images.unsplash.com/photo-1568901346375-23c9450c58cd")
+    center/cover;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background: #ff6b00;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e85d00;
+    transform: scale(1.05);
+}
+
+/* Produtos */
+.produtos {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.produtos h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.preco {
+    color: #ff6b00;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* Rodapé */
+footer {
+    background: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}

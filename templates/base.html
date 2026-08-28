@@ -1,23 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>{% block title %}Sabor & Cia{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-<h1>🍔 Sabor & Cia</h1>
+<header>
 
-<nav>
-    <a href="/">Início</a> |
-    <a href="/produtos">Produtos</a> |
-    <a href="/sobre">Sobre</a>
-</nav>
+    <div class="logo">
+        🍔 Sabor & Cia
+    </div>
 
-<hr>
+    <nav>
+        <a href="/">Início</a>
+        <a href="/produtos">Produtos</a>
+        <a href="/sobre">Sobre</a>
+    </nav>
+
+</header>
 
 {% block content %}
 {% endblock %}
+
+<footer>
+    <p>🍔 Sabor & Cia — Sabor que dá vontade de repetir!</p>
+</footer>
 
 </body>
 </html>
