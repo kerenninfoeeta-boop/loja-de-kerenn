@@ -17,7 +17,7 @@
 <tr>
     <td>{{ produto.nome }}</td>
 
-    <td>R$ {{ "%.2f"|format(produto.preco) }}</td>
+    <td>R$ {{ "%.2f"|format(produto.preco)|replace(".", ",") }}</td>
 
     <td>
 
